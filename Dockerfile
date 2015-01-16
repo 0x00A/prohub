@@ -16,3 +16,4 @@ COPY package.json /tmp/package.json
 RUN cd /tmp && npm install --production && cp -R node_modules /opt/app/
 
 ADD . /opt/app/
+RUN npm install browserify stylus && npm run bundle-js && npm run bundle-css

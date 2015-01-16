@@ -7,8 +7,8 @@
     "server": "node app/index.js",
     "bundle-css": "stylus ./app/styles/index.styl -o ./app/assets/css",
     "watch-css": "stylus -w ./app/styles/index.styl -o ./app/assets/css",
-    "bundle-js": "browserify ./app/client.js > ./app/assets/js/index.js",
-    "watch-js": "watchify ./app/client.js -o ./app/assets/js/index.js"
+    "bundle-js": "mkdir -p ./app/assets/js && browserify ./app/client.js > ./app/assets/js/index.js",
+    "watch-js": "watchify ./app/client.js -o ./app/assets/js/index.js",
   },
   "dependencies": {
     "JSONStream": "^0.10.0",
